@@ -20,16 +20,20 @@ spec:
   source:
     path: consolenotification
     helm:
-      values: |
-        ocp-console-notification:
-          ## The name of the ConsoleNotification resource in the cluster
-          name: "banner-env"
+    valueFiles:
+        - values.yaml
+        - values2.yaml
+        - values3.yaml
+      # values: |
+      #   ocp-console-notification:
+      #     ## The name of the ConsoleNotification resource in the cluster
+      #     name: "banner-env"
 
-          ## The background color that should be used for the banner
-          backgroundColor: red
-          ## The color of the text that will appear in the banner
-          color: "'#fff'"
-          ## The location of the banner. Options: BannerTop, BannerBottom, BannerTopBottom
-          location: BannerTop
-          ## The text that should be displayed in the banner. This value is required for the banner to be created
-          #text: "Productions reference guide"
+      #     ## The background color that should be used for the banner
+      #     backgroundColor: red
+      #     ## The color of the text that will appear in the banner
+      #     color: "'#fff'"
+      #     ## The location of the banner. Options: BannerTop, BannerBottom, BannerTopBottom
+      #     location: BannerTop
+      #     ## The text that should be displayed in the banner. This value is required for the banner to be created
+      #     #text: "Productions reference guide"
