@@ -20,10 +20,10 @@ spec:
   source:
     path: consolenotification
     helm:
-    valueFiles:
-        - values.yaml
-        - values2.yaml
-        - values3.yaml
+      valueFiles:
+          - values.yaml
+          - values2.yaml
+          - values3.yaml
       # values: |
       #   ocp-console-notification:
       #     ## The name of the ConsoleNotification resource in the cluster
